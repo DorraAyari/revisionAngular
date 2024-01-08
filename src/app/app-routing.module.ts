@@ -6,6 +6,7 @@ import { ShowShoppingComponent } from './show-shopping/show-shopping.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { ShowCartComponent } from './show-cart/show-cart.component';
 import { DetailPComponent } from './detail-p/detail-p.component';
+import { ModificationProduitComponent } from './modification-produit/modification-produit.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:'shop',component:ShowShoppingComponent},
   {path:'show',component:ShowCartComponent},
   {path:'detail-p/:id',component:DetailPComponent},
-  { path: '**', redirectTo: 'not-found' }, // Redirection vers le NotFoundPageComponent pour les URL non déclarées
+  {path:'modification-produit/:id',component:ModificationProduitComponent},
 
 ];
 @NgModule({

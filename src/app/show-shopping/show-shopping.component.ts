@@ -48,4 +48,8 @@ export class ShowShoppingComponent {
     // Redirigez l'utilisateur vers la page de modification avec l'ID de l'utilisateur
     this.router.navigate(['/detail-p',id]);
   }
+  edit(id: number) {
+    // Redirigez l'utilisateur vers la page de modification avec l'ID de l'utilisateur
+    this.router.navigate(['/modification-produit',id]);
+  }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Produit } from './Model/Produit';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,10 @@ export class ProductService {
   add(userData: any): Observable<any> {
     return this.http.post(this.baseUrl, userData);
   }
+  update(id: number, updatedProduit: Produit): Observable<Produit> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.put<Produit>(url, updatedProduit);
+  }
   getAllProduct() {
     return this.http.get<any[]>(this.baseUrl);
   }
@@ -22,7 +27,11 @@ export class ProductService {
   getAllCart() {
     return this.http.get<any[]>(this.baseUrlC);
   }
-
+ // Add a method to get a chambre by ID
+ getProductById(id: number): Observable<Produit> {
+  const url = `${this.baseUrl}/${id}`;
+  return this.http.get<Produit>(url);
+}
 
   constructor(private http: HttpClient) {}
 }

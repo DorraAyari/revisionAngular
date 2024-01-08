@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ShowCartComponent } from './show-cart/show-cart.component';
 import { DetailPComponent } from './detail-p/detail-p.component';
 import { PageComponent } from './page/page.component';
+import { ModificationProduitComponent } from './modification-produit/modification-produit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PageComponent } from './page/page.component';
     HomeComponent,
     ShowCartComponent,
     DetailPComponent,
-    PageComponent
+    PageComponent,
+    ModificationProduitComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<h2>Liste des utilisateurs</h2>
+<div>
+  <div *ngFor="let product of products">
+    <div>
+      <div>  <strong>Nom: </strong>{{ product.name }} </div>
+      <div>  <strong>Prix: </strong>{{ product.price }}</div>
+      <div> <strong>Description: </strong>{{ product.description }}  </div>
+    </div>
+    <button (click)="addCart(product.id)">buy</button>
+    <button (click)="detail(product.id)">detail</button>
+
+    <br><br>
+  </div>
+</div>

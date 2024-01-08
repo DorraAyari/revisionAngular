@@ -1,0 +1,39 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <!-- Champ de prénom -->
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text" id="name" formControlName="name">
+    <!-- Affichage des messages d'erreur pour le champ "firstName" -->
+
+    <div *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched">
+      Prénom est obligatoire.
+    </div>
+  </div>
+
+  <!-- Champ de nom de famille -->
+  <div class="form-group">
+    <label for="price">price</label>
+    <input type="text" id="price" formControlName="price">
+    <!-- Affichage des messages d'erreur pour le champ "lastName" -->
+    <div *ngIf="userForm.get('price')?.hasError('pattern') && userForm.get('price')?.touched">
+      price ne doit contenir que des chiffre.
+    </div>
+
+  </div>
+  <div class="form-group">
+    <label for="description">description</label>
+    <input type="text" id="description" formControlName="description">
+    <!-- Affichage des messages d'erreur pour le champ "lastName" -->
+    <div *ngIf="userForm.get('description')?.hasError('required') && userForm.get('description')?.touched">
+      description est obligatoire.
+    </div>
+
+    <div *ngIf="userForm.get('description')?.hasError('minlength') && userForm.get('description')?.touched">
+      description doit contenir au moins 3 caractères.
+    </div>
+  </div>
+
+  <!-- Autres champs du formulaire et messages d'erreur correspondants -->
+
+  <button type="submit" [disabled]="userForm.invalid">Ajouter produit</button>
+</form>

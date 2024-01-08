@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sample Product",
+      "price": 19.99,
+      "description": "This is a sample product description."
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "price": 1500,
+      "description": "sqdqsdsqdqsdsqd"
+    },
+    {
+      "id": 3,
+      "name": "test2",
+      "price": 1400,
+      "description": "gggggggggg"
+    },
+    {
+      "name": "HHH",
+      "price": "78",
+      "description": "HHHHHHHHHHHHHH",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "name": "Sample Product",
+      "price": 19.99,
+      "description": "This is a sample product description."
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "price": 1500,
+      "description": "sqdqsdsqdqsdsqd"
+    },
+    {
+      "id": 3,
+      "name": "test2",
+      "price": 1400,
+      "description": "gggggggggg"
+    },
+    {
+      "name": "HHH",
+      "price": "78",
+      "description": "HHHHHHHHHHHHHH",
+      "id": 4
+    }
+  ]
+}
